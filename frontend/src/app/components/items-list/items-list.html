@@ -1,0 +1,13 @@
+<h1>Lista de mercado</h1>
+
+<div>
+  <input [(ngModel)]="newName" placeholder="Nombre" />
+  <input [(ngModel)]="newQuantity" type="number" placeholder="Cantidad" />
+  <button (click)="addItem()">Agregar</button>
+</div>
+
+<ul>
+  <li *ngFor="let item of items">
+    {{ item.name }} — {{ item.quantity }}
+  </li>
+</ul>
